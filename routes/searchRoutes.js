@@ -11,15 +11,8 @@ router.get('/', async (req, res) => {
   }
 
   try {
-    const { results, totalResults } = await fetchPage(searchTerm, page);
-    const totalPages = Math.ceil(totalResults / 10);
-    
-    res.render('search', {
-      results,
-      searchTerm,
-      currentPage: parseInt(page, 10),
-      totalPages,
-    });
+    const { results, totalResults, totalPages, currentPage } = await fetchPage(searchTerm, page);
+    res.render('search', { results, searchTerm, totalPages, currentPage });
   } catch (error) {
     res.status(500).send('An error occurred while fetching data.');
   }
