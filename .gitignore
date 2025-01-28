@@ -1,0 +1,34 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+logs/
+*.log
+logs/*.log
+
+# Environment variables
+.env
+
+# VS Code settings
+.vscode/
+*.code-workspace
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Build files
+dist/
+build/
+
+# Temp files
+*.tmp
+*.swp
+*.swo
+*.bak
+
+# Other
+public/images/No_Image_Available.jpg
