@@ -30,7 +30,7 @@ This is a Node.js project that consumes the OMDB API to search for movies. It us
 
 ## Moviefy
 
-*Este é um projeto Node.js que consome a API OMDB para realizar buscas de filmes. Ele utiliza Express para o backend, EJS para renderização de views e Bootstrap para estilização.*
+*Este é um projeto Node.js que usa a API OMDB para realizar buscas de filmes. Ele utiliza Express para o backend, EJS para renderização de views e Bootstrap para estilização.*
 
 ## Requisitos
 
