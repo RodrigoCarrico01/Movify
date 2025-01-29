@@ -54,7 +54,8 @@ async function fetchPage(searchTerm, page = 1) {
 
         results.push(...data.Search.map(movie => ({
           ...movie,
-          Poster: movie.Poster !== 'N/A' ? movie.Poster : '/images/No_Image_Available.jpg'
+          Poster: movie.Poster !== 'N/A' ? movie.Poster : '/images/No_Image_Available.jpg',
+          imdbID: movie.imdbID 
         })));
       } catch (error) {
         console.error(`Error fetching page ${currentPage}:`, error.message);
