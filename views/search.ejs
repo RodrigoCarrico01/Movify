@@ -38,7 +38,6 @@
     <nav class="d-flex justify-content-center align-items-center mt-4">
       <% if (currentPage > 1) { %>
         <a class="btn btn-outline-primary me-2" href="/searchApi?q=<%= searchTerm %>&page=1">1</a>
-        <a class="btn btn-outline-primary me-2" href="/searchApi?q=<%= searchTerm %>&page=<%= currentPage - 1 %>">Anterior</a>
       <% } %>
 
       <form action="/searchApi" method="get" class="d-flex align-items-center">
@@ -49,7 +48,6 @@
       </form>
 
       <% if (currentPage < totalPages) { %>
-        <a class="btn btn-outline-primary ms-2" href="/searchApi?q=<%= searchTerm %>&page=<%= currentPage + 1 %>">Próxima</a>
         <a class="btn btn-outline-primary ms-2" href="/searchApi?q=<%= searchTerm %>&page=<%= totalPages %>"><%= totalPages %></a>
       <% } %>
     </nav>
