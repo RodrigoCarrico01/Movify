@@ -1,0 +1,85 @@
+/* Search Page Styling */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap');
+
+body {
+  background-color: var(--color4);
+  color: var(--color3);
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Search Form */
+form {
+  background: var(--color8);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+input[type="text"] {
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+/* Cards */
+.card {
+  background-color: var(--color6);
+  color: var(--color3);
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.card-img-top {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  border-bottom: 3px solid var(--color2);
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  min-height: 3.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.card-text {
+  font-size: 1rem;
+  min-height: 1.5rem;
+}
+
+.btn-primary {
+  background-color: var(--color2);
+  border: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  margin-top: auto;
+}
+
+.btn-primary:hover {
+  background-color: var(--color5);
+}
