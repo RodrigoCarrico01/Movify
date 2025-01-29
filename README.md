@@ -17,9 +17,13 @@ This is a Node.js project that consumes the OMDB API to search for movies. It us
 - `npm install`
 - Create a .env file with => `OMDB_API_KEY=(Your API key) VERIFY_KEY=(Your verify key)`
 
-## API Used
+## Used API
 
 - https://www.omdbapi.com
+
+## ATTENTION
+
+*This API requires a minimum of 3 characters to start a search.*
 
 
 # Português
@@ -44,3 +48,8 @@ VERIFY_KEY=(A tua verify key)`
 ## API Utilizada
 
 - https://www.omdbapi.com
+
+## ATENÇÃO 
+
+*Esta API tem um requisito mínimo de 3 caracteres para iniciar pesquisa.*
+
