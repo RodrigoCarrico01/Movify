@@ -5,20 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/styles.css">
-  
+  <link rel="stylesheet" href="/css/home.css">
   <title>Home</title>
 </head>
 <body class="bg-dark text-light">
+  <video class="video-background" autoplay loop muted playsinline>
+    <source src="/videos/black-shapes-abstract-shapes-geometric-moving-corporate-background-loop-animation.mp4" type="video/mp4">
+  </video>
+  
   <%- include('partials/header') %>
-  <main class="container my-5">
-    <div class="text-center">
-      <h1 class="display-4">Welcome to Moviefy</h1>
-      <p class="lead">Search for your favorite movies and explore details!</p>
-      <a href="/search" class="btn btn-primary mt-4">Go to Search</a>
+  
+  <main class="d-flex justify-content-center align-items-center vh-100 text-center">
+    <div class="main-content p-5 rounded">
+      <h1 class="display-3 fw-bold">Welcome to Moviefy</h1>
+      <p class="lead fs-4">Discover your favorite movies and explore detailed insights.</p>
+      <a href="/search" class="btn btn-lg btn-primary mt-4 shadow">Explore Now</a>
     </div>
   </main>
   
   <%- include('partials/footer') %>
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

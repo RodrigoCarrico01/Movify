@@ -6,6 +6,10 @@
   --color5: #150d0f;
   --color6: #243a69;
   --color7: #10234d;
+  --color8: #0b0607;
+  --btn-primary: var(--color6);
+  --btn-hover: var(--color2);
+  --btn-text: var(--color3);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap');
@@ -23,60 +27,67 @@ main {
   flex: 1;
 }
 
+/* HEADER */
+.navbar {
+  background-color: var(--color8);
+  padding: 1rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color3) !important;
+  letter-spacing: 1px;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.1rem;
+  margin-left: 15px;
+  color: var(--color3) !important;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--color2) !important;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+/* FOOTER */
 footer {
-  background-color: var(--color5);
+  background-color: var(--color8);
   color: var(--color1);
   text-align: center;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   margin-top: auto;
-  box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.6);
 }
 
-.navbar {
-  background-color: var(--color5);
-  margin-bottom: 20px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+footer p {
+  margin: 0;
+  font-size: 1rem;
+  opacity: 0.8;
 }
 
-.navbar-brand, .nav-link {
-  color: var(--color3) !important;
-}
-
-.card-img-top {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.card {
-  height: 100%;
-  background-color: var(--color2);
-  color: var(--color3);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border: none;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.card-body {
-  text-align: center;
-}
-
-.card-title {
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
+/* BUTTONS */
 .btn {
-  background-color: var(--color6);
-  color: var(--color3);
-  margin-top: 10px;
+  background-color: var(--btn-primary);
+  color: var(--btn-text);
   border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn:hover {
-  background-color: var(--color2);
-  color: var(--color4);
+  background-color: var(--btn-hover);
+}
+
+.btn:active {
+  background-color: var(--color7);
 }
