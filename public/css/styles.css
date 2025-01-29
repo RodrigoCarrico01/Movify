@@ -1,48 +1,82 @@
+:root {
+  --color1: #d4cdc5;
+  --color2: #5b88a5;
+  --color3: #f4f4f2;
+  --color4: #191013;
+  --color5: #150d0f;
+  --color6: #243a69;
+  --color7: #10234d;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap');
+
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #121212;
-  color: #e0e0e0;
+  background-color: var(--color4);
+  color: var(--color3);
+  font-family: 'Open Sans', sans-serif;
 }
+
 main {
   flex: 1;
 }
+
 footer {
-  background-color: #343a40;
-  color: #e0e0e0;
+  background-color: var(--color5);
+  color: var(--color1);
   text-align: center;
   padding: 1rem 0;
   margin-top: auto;
+  box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.5);
 }
 
-  .navbar {
-    margin-bottom: 20px;
-  }
-  .card-img-top {
-    width: 100%;
-    height: 300px; /* Ajusta a altura para manter o mesmo tamanho para todas as imagens */
-    object-fit: cover; /* Garante que as imagens sejam cortadas proporcionalmente */
-    border-radius: 8px; /* Cantos levemente arredondados */
-  }
-  
-  .card {
-    height: 100%; /* Faz com que os cartões tenham a mesma altura */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .card-body {
-    text-align: center;
-  }
-  
-  .card-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
-  
-  .btn {
-    margin-top: 10px;
-  }
-  
+.navbar {
+  background-color: var(--color5);
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-brand, .nav-link {
+  color: var(--color3) !important;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card {
+  height: 100%;
+  background-color: var(--color2);
+  color: var(--color3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: none;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.btn {
+  background-color: var(--color6);
+  color: var(--color3);
+  margin-top: 10px;
+  border: none;
+}
+
+.btn:hover {
+  background-color: var(--color2);
+  color: var(--color4);
+}
