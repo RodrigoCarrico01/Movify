@@ -10,22 +10,31 @@
 <body class="bg-dark text-light">
   <%- include('partials/header') %>
   <main class="container my-4">
-    <h1 class="text-center mb-4">Results for "<%= searchTerm %>"</h1>
-    <div class="row">
-      <% results.forEach(movie => { %>
-        <div class="col-md-4 mb-4">
-          <div class="card bg-secondary text-light h-100 shadow-lg">
-            <img src="<%= movie.Poster %>" class="card-img-top" alt="<%= movie.Title %>">
-            <div class="card-body">
-              <h5 class="card-title"><%= movie.Title %></h5>
-              <p class="card-text">Year: <%= movie.Year %></p>
-              <a href="#" class="btn btn-primary">Saber Mais</a>
+    <h1 class="text-center mb-4">Search for Movies & Series</h1>
+    <form action="/search" method="get" class="d-flex justify-content-center mb-4">
+      <input type="text" name="q" class="form-control w-50" placeholder="Search for movies..." required>
+      <button type="submit" class="btn btn-primary ms-2">Search</button>
+    </form>
+    
+    <% if (results && results.length > 0) { %>
+      <div class="row">
+        <% results.forEach(movie => { %>
+          <div class="col-md-4 mb-4">
+            <div class="card bg-secondary text-light h-100 shadow-lg">
+              <img src="<%= movie.Poster %>" class="card-img-top" alt="<%= movie.Title %>">
+              <div class="card-body">
+                <h5 class="card-title"><%= movie.Title %></h5>
+                <p class="card-text">Year: <%= movie.Year %></p>
+                <a href="#" class="btn btn-primary">Saber Mais</a>
+              </div>
             </div>
           </div>
-        </div>
-      <% }) %>
-    </div>
-
+        <% }) %>
+      </div>
+    <% } else if (searchTerm) { %>
+      <p class="text-center">No results found for "<%= searchTerm %>"</p>
+    <% } %>
+    
     <nav class="d-flex justify-content-center align-items-center mt-4">
       <% if (currentPage > 1) { %>
         <a class="btn btn-outline-primary me-2" href="/search?q=<%= searchTerm %>&page=1">1</a>
