@@ -3,7 +3,7 @@ const { fetchPage } = require('../API/omdbSearchFunctions');
 
 const router = express.Router();
 
-router.get('/', async (req, res) => {
+router.get('/searchApi', async (req, res) => {
   const { q: searchTerm, page = 1 } = req.query;
 
   if (!searchTerm) {

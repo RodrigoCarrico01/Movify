@@ -3,14 +3,12 @@ const { fetchPage } = require('../API/omdbSearchFunctions');
 
 const router = express.Router();
 
-// Rota para renderizar a página inicial
 router.get('/', (req, res) => {
   res.render('home');
 });
 
-// Rota para renderizar a página de busca com filmes populares por padrão
 router.get('/search', async (req, res) => {
-  const searchTerm = req.query.q || 'popular'; // Define "popular" como pesquisa padrão
+  const searchTerm = req.query.q || 'popular'; 
   const page = parseInt(req.query.page, 10) || 1;
 
   try {
