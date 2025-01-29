@@ -10,9 +10,9 @@
 <body class="bg-dark text-light">
   <%- include('partials/header') %>
   <main class="container my-4">
-    <h1 class="text-center mb-4">Search for Movies & Series</h1>
+    <h1 class="text-center mb-4">Search for Movies & TV Shows</h1>
     <form action="/searchApi" method="get" class="d-flex justify-content-center mb-4">
-      <input type="text" name="q" class="form-control w-50" placeholder="Search for movies..." required>
+      <input type="text" name="q" class="form-control w-50" placeholder="Search for movies or TV shows..." required>
       <button type="submit" class="btn btn-primary ms-2">Search</button>
     </form>
     
@@ -25,7 +25,7 @@
               <div class="card-body">
                 <h5 class="card-title"><%= movie.Title %></h5>
                 <p class="card-text">Year: <%= movie.Year %></p>
-                <a href="/movie/<%= movie.imdbID %>" class="btn btn-primary">Saber Mais</a>
+                <a href="/movie/<%= movie.imdbID %>" class="btn btn-primary">Learn More</a>
               </div>
             </div>
           </div>
@@ -42,9 +42,9 @@
 
       <form action="/searchApi" method="get" class="d-flex align-items-center">
         <input type="hidden" name="q" value="<%= searchTerm %>">
-        <label for="pageInput" class="me-2">Página</label>
+        <label for="pageInput" class="me-2">Page</label>
         <input id="pageInput" type="number" name="page" value="<%= currentPage %>" min="1" max="<%= totalPages %>" class="form-control text-center me-2" style="width: 80px;">
-        <button type="submit" class="btn btn-primary">Ir</button>
+        <button type="submit" class="btn btn-primary">Go</button>
       </form>
 
       <% if (currentPage < totalPages) { %>

@@ -7,9 +7,13 @@ async function fetchPage(searchTerm, page = 1) {
     if (!searchTerm) {
       throw new Error('Search term is required');
     }
+    
+    if (searchTerm.length < 3) {
+      throw new Error('Search term must be at least 3 characters long. The API does not support shorter queries.');
+    }
 
     const baseURL = `http://www.omdbapi.com/`;
-    const resultsPerPage = 9; // Mostrar 9 resultados por página
+    const resultsPerPage = 9;
 
     console.log(`Fetching total results for: ${searchTerm}`);
     const totalResultsResponse = await axios.get(baseURL, {
