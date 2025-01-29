@@ -11,7 +11,7 @@
   <%- include('partials/header') %>
   <main class="container my-4">
     <h1 class="text-center mb-4">Search for Movies & Series</h1>
-    <form action="/search" method="get" class="d-flex justify-content-center mb-4">
+    <form action="/searchApi" method="get" class="d-flex justify-content-center mb-4">
       <input type="text" name="q" class="form-control w-50" placeholder="Search for movies..." required>
       <button type="submit" class="btn btn-primary ms-2">Search</button>
     </form>
@@ -37,11 +37,11 @@
     
     <nav class="d-flex justify-content-center align-items-center mt-4">
       <% if (currentPage > 1) { %>
-        <a class="btn btn-outline-primary me-2" href="/search?q=<%= searchTerm %>&page=1">1</a>
-        <a class="btn btn-outline-primary me-2" href="/search?q=<%= searchTerm %>&page=<%= currentPage - 1 %>">Anterior</a>
+        <a class="btn btn-outline-primary me-2" href="/searchApi?q=<%= searchTerm %>&page=1">1</a>
+        <a class="btn btn-outline-primary me-2" href="/searchApi?q=<%= searchTerm %>&page=<%= currentPage - 1 %>">Anterior</a>
       <% } %>
 
-      <form action="/search" method="get" class="d-flex align-items-center">
+      <form action="/searchApi" method="get" class="d-flex align-items-center">
         <input type="hidden" name="q" value="<%= searchTerm %>">
         <label for="pageInput" class="me-2">Página</label>
         <input id="pageInput" type="number" name="page" value="<%= currentPage %>" min="1" max="<%= totalPages %>" class="form-control text-center me-2" style="width: 80px;">
@@ -49,8 +49,8 @@
       </form>
 
       <% if (currentPage < totalPages) { %>
-        <a class="btn btn-outline-primary ms-2" href="/search?q=<%= searchTerm %>&page=<%= currentPage + 1 %>">Próxima</a>
-        <a class="btn btn-outline-primary ms-2" href="/search?q=<%= searchTerm %>&page=<%= totalPages %>"><%= totalPages %></a>
+        <a class="btn btn-outline-primary ms-2" href="/searchApi?q=<%= searchTerm %>&page=<%= currentPage + 1 %>">Próxima</a>
+        <a class="btn btn-outline-primary ms-2" href="/searchApi?q=<%= searchTerm %>&page=<%= totalPages %>"><%= totalPages %></a>
       <% } %>
     </nav>
   </main>

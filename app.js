@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const searchRoutes = require('./routes/searchRoutes');
+const pagesRoutes = require('./routes/pagesRoutes');
 const path = require('path');
 
 const app = express();
@@ -14,11 +15,8 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Usar as rotas de busca
-app.use('/search', searchRoutes);
-
-app.get('/', (req, res) => {
-  res.render('home');
-});
+app.use('/searchApi', searchRoutes);
+app.use('/', pagesRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
